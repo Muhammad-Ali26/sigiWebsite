@@ -1,0 +1,81 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {
+      backgroundImage: {
+        homebg: "url('/public/images/home.webp')",
+        texture: "url('/public/images/Texture.webp')",
+        headerTexture: "url('/public/images/headerTexture.webp')",
+        menuTexture: "url('/public/images/menuTexture.webp')",
+        // deticatedTeamBg: "url('/public/images/deticatedTeam.webp')",
+        thoughtOne: "url('/public/images/thoughts1.webp')",
+        thoughtTwo: "url('/public/images/thoughts2.webp')",
+        thoughtThree: "url('/public/images/thoughts3.webp')",
+        thoughtFour: "url('/public/images/thoughts4.webp')",
+        recentWorkBgOne: "url('/public/images/recentwork-bgimg-one.webp')",
+        recentWorkBgThree: "url('/public/images/recentwork-bgimg-three.webp')",
+        recentWorkBgFive: "url('/public/images/recentwork-bgimg-five.webp')",
+        recentWorkBgSix: "url('/public/images/recentwork-bgimg-six.webp')",
+        recentWorkBgSeven: "url('/public/images/recentwork-bgimg-seven.webp')",
+        officeOne: "url('/public/images/about/Office-one.webp')",
+        officeTwo: "url('/public/images/about/Office-two.webp')",
+        learnOne: "url('/public/images/team/learn-one.webp')",
+        learnTwo: "url('/public/images/team/learn-two.webp')",
+        farmBannerBg: "url('/public/images/case-study-farmsharing/bannerbg.webp')",
+        truckBannerBg: "url('/public/images/case-study-truckexpress/bannerbg.webp')",
+        pacifricaBannerBg: "url('/public/images/case-study-pacifrica/bannerbg.webp')",
+        linerOne: "linear-gradient(180deg, rgba(44, 43, 78, 0.384) 0%, rgba(255, 137, 51, 0.32) 44.27%, rgba(14, 13, 38, 0.704) 100%)",
+        thoughtsLinear: "linear-gradient(180deg, rgba(44, 43, 78, 0.48) 0%, rgba(255, 137, 51, 0.4) 44.27%, rgba(14, 13, 38, 0.88) 100%)",
+
+      },
+      boxShadow: {
+        textShadow: "text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);"
+      },
+      fontFamily: {
+        switzer: "Switzer"
+      },
+      colors: {
+        formText: "rgba(0, 0, 0, 0.4)",
+        paraText: "rgba(0, 0, 0, 0.6)",
+        sigiYellow: "#FF8C1D",
+        iconColor: "rgba(255, 255, 255, 0.6)",
+        barColor: "rgba(255, 255, 255, 0.4)",
+        teamBg1: "#FF9F43",
+        teamBg2: "#4E86FF",
+        teamBg3: "#44E598",
+        teamBg4: "#FFB09C",
+        teamBg5: "#9BFFCF",
+        teamBg6: "#93B5FF",
+        teamBg7: "#FFC996",
+        teamBg8: "#C2B8FF",
+        teamBg9: "#A4F4FF",
+        teamBg10: "#A1F8AA",
+        teamBg11: "#EFEB8A",
+        sigiBlue: "#004AEA",
+      },
+      backgroundColor: {
+        formText: "rgba(0, 0, 0, 0.4)",
+        paraText: "rgba(0, 0, 0, 0.6)",
+        sigiYellow: "#FF8C1D",
+        iconColor: "rgba(255, 255, 255, 0.6)",
+        barColor: "rgba(255, 255, 255, 0.4)",
+        teamBg1: "#FF9F43",
+        teamBg2: "#4E86FF",
+        teamBg3: "#44E598",
+        teamBg4: "#FFB09C",
+        teamBg5: "#9BFFCF",
+        teamBg6: "#93B5FF",
+        teamBg7: "#FFC996",
+        teamBg8: "#C2B8FF",
+        teamBg9: "#A4F4FF",
+        teamBg10: "#A1F8AA",
+        teamBg11: "#EFEB8A",
+        sigiBlue: "#004AEA",
+      }
+    },
+  },
+  plugins: [],
+}

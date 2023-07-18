@@ -1,0 +1,47 @@
+.swiper-button-prev {
+    position: absolute;
+    top: 92%;
+    left: 4px;
+    /* transform: translateX(-3px); */
+}
+
+.swiper-button-prev::after {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.swiper-button-next {
+    position: absolute;
+    top: 92%;
+    left: 50px;
+}
+
+.swiper-button-next::after {
+    font-size: 24px;
+    font-weight: 900;
+    color: black;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.swiper {
+    width: 100% !important;
+}
+
+
+.swiper-button-prev:after {
+    content: '\2190' !important;
+}
+
+.swiper-button-next:after {
+    content: '\2192';
+}
