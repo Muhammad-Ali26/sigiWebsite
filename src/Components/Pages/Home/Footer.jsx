@@ -12,17 +12,14 @@ export default function Footer() {
             Company
           </h4>
           <ul className="space-y-4">
-            <Link
-              to="/about-us"
-              className="text-white font-switzer font-medium text-sm lg:text-base"
-            >
-              About us
-            </Link>
             <li className="text-white font-switzer font-medium text-sm lg:text-base">
-              Why Sigi Tech
+              <Link to="/about_us">About us</Link>
             </li>
             <li className="text-white font-switzer font-medium text-sm lg:text-base">
-              Meet the Team
+              <Link to="/why_choose_us">Why Sigi Tech</Link>
+            </li>
+            <li className="text-white font-switzer font-medium text-sm lg:text-base">
+              <Link to="/team">Meet the Team</Link>
             </li>
           </ul>
         </div>
@@ -36,25 +33,29 @@ export default function Footer() {
           <div className="md:flex gap-10 lg:gap-20 space-y-4 md:space-y-0">
             <ul className="space-y-4">
               <li className="text-white font-switzer font-medium text-sm lg:text-base">
-                Dedicated Development Team
+                <Link to="">Dedicated Development Team</Link>
               </li>
               <li className="text-white font-switzer font-medium text-sm lg:text-base">
-                Custom Software Development
+                <Link to="/ui_ux_design_services">
+                  Custom Software Development
+                </Link>
               </li>
               <li className="text-white font-switzer font-medium text-sm lg:text-base">
-                Mobile App Development
+                <Link to="/mobile_app_services">Mobile App Development</Link>
               </li>
             </ul>
 
             <ul className="space-y-4">
               <li className="text-white font-switzer font-medium text-sm lg:text-base">
-                Front End Development
+                <Link to="/web_development_services">
+                  Front End Development
+                </Link>
               </li>
               <li className="text-white font-switzer font-medium text-sm lg:text-base">
-                POS Development
+                <Link to="">POS Development</Link>
               </li>
               <li className="text-white font-switzer font-medium text-sm lg:text-base">
-                ERP Development
+                <Link to="">ERP Development</Link>
               </li>
             </ul>
           </div>
@@ -66,10 +67,10 @@ export default function Footer() {
           </h4>
           <ul className="space-y-4">
             <li className="text-white font-switzer font-medium text-sm lg:text-base">
-              Case Studies
+              <Link to="/case_studies">Case Studies</Link>
             </li>
             <li className="text-white font-switzer font-medium text-sm lg:text-base">
-              Testimonials
+              <Link to="">Testimonials</Link>
             </li>
           </ul>
         </div>
@@ -82,24 +83,33 @@ export default function Footer() {
               Sher Ali Road, Kiberia Town, <br /> Raiwind Road Lahore
             </li>
           </ul>
-          <button className="text-white bg-sigiYellow flex justify-center items-center gap-x-5 py-2 px-6 rounded-sm border border-sigiYellow hover:bg-transparent hover:text-sigiYellow duration-200">
+          <Link
+            to="/contact_us"
+            className="text-white bg-sigiYellow flex justify-center items-center gap-x-5 py-2 px-6 rounded-sm border border-sigiYellow hover:bg-transparent hover:text-sigiYellow duration-200"
+          >
             <div className="w-2 h-2 rounded-full bg-white shadow animate-ping"></div>
             <span className="font-medium font-switzer md:text-xl">
               Get in touch
             </span>
-          </button>
+          </Link>
         </div>
       </div>
 
       <div className="py-3 md:py-10 relative">
         <div className="md:flex justify-between items-center w-[90%] lg:w-[80%] 2xl:w-[68%] mx-auto space-y-4 md:space-y-0">
           <div className="flex gap-5 justify-center">
-            <h4 className="text-white font-switzer font-medium text-sm lg:text-base">
+            <Link
+              to="/blogs"
+              className="text-white font-switzer font-medium text-sm lg:text-base"
+            >
               Blog
-            </h4>
-            <h4 className="text-white font-switzer font-medium text-sm lg:text-base">
+            </Link>
+            <Link
+              to="/careers"
+              className="text-white font-switzer font-medium text-sm lg:text-base"
+            >
               Careers
-            </h4>
+            </Link>
           </div>
 
           <div>

@@ -49,7 +49,7 @@ export default function Navbar() {
         {showCanvas === false ? (
           ""
         ) : (
-          <div className="bg-cover bg-no-repeat bg-center w-full h-[980px] absolute top-0 left-0 z-30 before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-[#004AEA] before:z-40">
+          <div className="bg-cover bg-no-repeat bg-center w-full lg:h-[980px] absolute top-0 left-0 z-30 before:content-[''] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-[#004AEA] before:z-40">
             <div className="w-[90%] m-auto relative z-[50]">
               <div className="flex justify-between items-center">
                 <Link to="/" className="py-6">
@@ -60,11 +60,11 @@ export default function Navbar() {
                   />
                 </Link>
                 <div className="flex gap-5 md:gap-10 items-center">
-                  <div>
+                  <Link to="/contact_us">
                     <button className="text-xl font-[Sailec-Regular] text-white border-2 border-white bg-transparent px-4 py-2 md:px-10 md:py-3 rounded hover:bg-white hover:text-[#004AEA] duration-150">
                       Let’s Talk
                     </button>
-                  </div>
+                  </Link>
                   <button
                     onClick={() => {
                       setShowCanvas(false);
@@ -77,24 +77,24 @@ export default function Navbar() {
               </div>
             </div>
 
-            <div className="w-[85%] lg:w-[75%] 2xl:w-[65%] m-auto pt-10 2xl:pt-20 relative z-[50]">
-              <ul className="space-y-20 w-fit">
-                <li className="text-white cursor-pointer text-4xl lg:text-5xl font-switzer font-medium dropdown">
+            <div className="w-[85%] lg:w-[75%] 2xl:w-[65%] m-auto py-20 relative z-[50]">
+              <ul className="space-y-20 w-fit menu">
+                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium dropdown">
                   Company
                   <CompanyDropDownMenu />
                 </li>
-                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium cursor-pointer dropdown">
+                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium dropdown">
                   Services
                   <ServicesDropDownMenu />
                 </li>
-                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium cursor-pointer">
+                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium">
                   <Link to="/case_studies">Case Studies</Link>
                 </li>
-                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium cursor-pointer">
+                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium">
                   Expertise
                 </li>
-                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium cursor-pointer">
-                  Contact
+                <li className="text-white text-4xl lg:text-5xl font-switzer font-medium">
+                  <Link to="/contact_us"> Contact</Link>
                 </li>
               </ul>
             </div>

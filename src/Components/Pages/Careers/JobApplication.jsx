@@ -5,6 +5,64 @@ import Navbar from "../Home/Navbar";
 import { Link } from "react-router-dom";
 
 export default function JobApplication() {
+  const handleFileChange = (e) => {
+    const inputElement = e.target;
+    const dropZoneElement = inputElement.closest(".drop-zone");
+
+    if (inputElement.files.length) {
+      updateThumbnail(dropZoneElement, inputElement.files[0]);
+    }
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    const dropZoneElement = e.target.closest(".drop-zone");
+    dropZoneElement.classList.add("drop-zone--over");
+  };
+
+  const handleDragLeave = (e) => {
+    const dropZoneElement = e.target.closest(".drop-zone");
+    dropZoneElement.classList.remove("drop-zone--over");
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    const dropZoneElement = e.target.closest(".drop-zone");
+    dropZoneElement.classList.remove("drop-zone--over");
+
+    if (e.dataTransfer.files.length) {
+      const inputElement = dropZoneElement.querySelector(".drop-zone__input");
+      inputElement.files = e.dataTransfer.files;
+      updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+    }
+  };
+
+  const updateThumbnail = (dropZoneElement, file) => {
+    let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+    if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+      dropZoneElement.querySelector(".drop-zone__prompt").remove();
+    }
+
+    if (!thumbnailElement) {
+      thumbnailElement = document.createElement("div");
+      thumbnailElement.classList.add("drop-zone__thumb");
+      dropZoneElement.appendChild(thumbnailElement);
+    }
+
+    thumbnailElement.dataset.label = file.name;
+
+    if (file.type.startsWith("image/")) {
+      const reader = new FileReader();
+
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+      };
+    } else {
+      thumbnailElement.style.backgroundImage = null;
+    }
+  };
   return (
     <section>
       <Navbar />
@@ -58,7 +116,25 @@ export default function JobApplication() {
             <h4 className="text-2xl lg:text-4xl font-switzer">
               Autofill Application:
             </h4>
-            <p className="text-paraText font-switzer">Upload your resume/Cv:</p>
+            <div
+              className="drop-zone space-y-3"
+              onDragOver={handleDragOver}
+              onDragLeave={handleDragLeave}
+              onDrop={handleDrop}
+            >
+              <h4 className="drop-zone__prompt text-black font-switzer font-light">
+                Upload your Resume or drag and drop it here
+              </h4>
+              <p className="font-switzer text-[#00000099] font-light">
+                Only .doc, .docx, .pdf format{" "}
+              </p>
+              <input
+                type="file"
+                name="myFile"
+                className="drop-zone__input"
+                onChange={handleFileChange}
+              />
+            </div>
           </div>
 
           <div>

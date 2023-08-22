@@ -1,6 +1,6 @@
 // @ts-nocheck
 import Navbar from "./Navbar";
-import React, { useEffect, useRef, useState } from "react";
+import React  from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade, Autoplay } from "swiper/modules";
 import "swiper/css";

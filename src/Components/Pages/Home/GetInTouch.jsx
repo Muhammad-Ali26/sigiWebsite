@@ -64,12 +64,14 @@ export default function GetInTouch() {
                 className="mt-10 p-3 outline-none border-2 border-formText"
               ></textarea>
             </div>
-            <button className="text-white bg-sigiYellow flex justify-center items-center gap-x-5 py-3 px-12 rounded-sm border border-sigiYellow hover:bg-transparent hover:text-sigiYellow duration-200">
-              <div className="w-2 h-2 rounded-full bg-white shadow animate-ping"></div>
-              <span className="font-medium font-switzer md:text-xl">
-                Send message
-              </span>
-            </button>
+            <div className="flex justify-center">
+              <button className="text-white bg-sigiYellow flex justify-center items-center gap-x-5 py-3 px-12 rounded-sm border border-sigiYellow hover:bg-transparent hover:text-sigiYellow duration-200">
+                <div className="w-2 h-2 rounded-full bg-white shadow animate-ping"></div>
+                <span className="font-medium font-switzer md:text-xl">
+                  Send message
+                </span>
+              </button>
+            </div>
           </form>
         </div>
       </div>

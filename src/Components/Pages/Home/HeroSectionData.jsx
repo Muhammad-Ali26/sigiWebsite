@@ -1,5 +1,6 @@
 import React from "react";
 import { BsArrowDownCircle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 export default function HeroSectionData(props) {
   return (
@@ -26,12 +27,13 @@ export default function HeroSectionData(props) {
                 </p>
               </div>
 
-              <div
+              <Link
+                to="/case_studies"
                 className={`flex gap-3 items-center ${props.viewColor} md:text-2xl animate-bounce`}
               >
                 <BsArrowDownCircle />
                 <p className="mb-0">View more projects</p>
-              </div>
+              </Link>
             </div>
 
             <div>

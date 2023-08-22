@@ -5,6 +5,7 @@ import { Mousewheel, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-flip";
 import RecentWorkData from "./RecentWorkData";
+import { Link } from "react-router-dom";
 
 export default function RecentWork() {
   return (
@@ -22,12 +23,12 @@ export default function RecentWork() {
             a deep understanding of industry dynamics, allows us to tailor our
             strategies to your unique needs.
           </p>
-          <button className="text-white bg-sigiYellow flex items-center gap-x-5 py-3 px-12 rounded-sm border border-sigiYellow hover:bg-transparent hover:text-sigiYellow duration-200">
+          <Link to="/case_studies" className="text-white bg-sigiYellow flex items-center gap-x-5 py-3 px-12 w-[300px] rounded-sm border border-sigiYellow hover:bg-transparent hover:text-sigiYellow duration-200">
             <div className="w-2 h-2 rounded-full bg-white shadow animate-ping"></div>
             <span className="font-medium font-switzer md:text-xl">
               Explore all work
             </span>
-          </button>
+          </Link>
         </div>
       </div>
 

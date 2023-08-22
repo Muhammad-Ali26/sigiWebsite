@@ -40,8 +40,10 @@
 
 .swiper-button-prev:after {
     content: '\2190' !important;
+    color: black;
 }
 
 .swiper-button-next:after {
     content: '\2192';
+    color: black;
 }

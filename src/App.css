@@ -1,8 +1,104 @@
+.menu li:hover {
+  cursor: pointer;
+}
+
 .dropdown-menu {
   display: none;
 }
 
 .dropdown:hover .dropdown-menu {
   display: block;
+  cursor: default;
 }
 
+/* Thumbs Swiper Css  */
+.custom-swiper .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.custom-swiper .swiper-slide {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-swiper .swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.custom-swiper .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.custom-swiper .mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.custom-swiper .mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.custom-swiper .mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.custom-swiper .mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+
+/* Drag and Drop File Css  */
+.drop-zone {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  border: 2px dashed #00000099;
+  border-radius: 10px;
+  background: #F4F5F6F7;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone__input {
+  display: none;
+}
+
+.drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+.drop-zone__thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}

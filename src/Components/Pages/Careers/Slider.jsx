@@ -61,6 +61,9 @@ export default function Slider() {
     <SwiperSlide>
       <SwiperCards imgSrc="/images/clip/clip-green.webp" />
     </SwiperSlide>
+    <SwiperSlide>
+      <SwiperCards imgSrc="/images/clip/clip-green.webp" />
+    </SwiperSlide>
   </Swiper>
   )
 }

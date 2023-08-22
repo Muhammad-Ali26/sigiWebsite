@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function CompanyDropDownMenu() {
   return (
     <div className="dropdown-menu">
-      <ul className="bg-white absolute top-20 left-60 rounded-md p-4 space-y-5">
+      <ul className="bg-white absolute top-20 left-72 rounded-md p-4 space-y-5">
         <Link to="/about_us">
           <li className="hover:bg-[#F4F4F4] p-2">
             <h2 className="text-black text-xl font-switzer font-medium">

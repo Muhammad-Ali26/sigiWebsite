@@ -2,7 +2,7 @@
 import ThoughtsData from "./ThoughtsData";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 
 export default function OurThoughts() {
@@ -24,11 +24,12 @@ export default function OurThoughts() {
             slidesPerView={4}
             loop={true}
             navigation={true}
-            modules={[Autoplay]}
+            modules={[Autoplay, Navigation]}
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
             }}
+            style={{paddingBottom:"80px"}}
             breakpoints={{
               320: {
                 slidesPerView: 1,

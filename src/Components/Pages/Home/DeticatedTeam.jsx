@@ -2,22 +2,20 @@
 import React, { useRef, useState } from "react";
 import DeticatedTeamData from "./DeticatedTeamData";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay } from "swiper/modules";
+import { EffectFade, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-creative";
 
 export default function DeticatedTeam() {
   return (
     <Swiper
-      className="mySwiper"
-      slidesPerView={1}
-      modules={[EffectFade, Autoplay]}
+      direction={"vertical"}
       effect={"fade"}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
-      loop={true}
+      slidesPerView={1}
+      mousewheel={true}
+      modules={[Mousewheel, EffectFade]}
+      className="mySwiper h-screen"
+      style={{ margin: "0px" }}
     >
       <SwiperSlide>
         <DeticatedTeamData
